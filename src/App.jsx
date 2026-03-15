@@ -9,16 +9,18 @@ import Footer from './components/Footer';
 function App() {
   return (
     <BrowserRouter>
-      <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', maxWidth: '900px', margin: '0 auto', fontFamily: 'Arial, sans-serif' }}>
+      <div className="flex flex-col min-h-screen text-gray-800 font-sans">
         <Navbar />
         
-        <main style={{ flex: 1 }}>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/blogs" element={<Blogs />} />
-            <Route path="/projects" element={<Projects />} />
-          </Routes>
+        <main className="flex-1 max-w-5xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-8">
+          <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 md:p-8">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/blogs" element={<Blogs />} />
+              <Route path="/projects" element={<Projects />} />
+            </Routes>
+          </div>
         </main>
         
         <Footer />
